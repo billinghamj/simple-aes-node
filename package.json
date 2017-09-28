@@ -1,0 +1,50 @@
+{
+  "name": "simple-aes",
+  "version": "0.1.0",
+  "description": "Simple abstraction of AES to ensure no silly mistakes",
+  "homepage": "https://github.com/billinghamj/simple-aes",
+  "bugs": "https://github.com/billinghamj/simple-aes/issues",
+  "license": "MIT",
+  "author": "James Billingham <james@jamesbillingham.com> (https://jamesbillingham.com)",
+  "main": "build/index.js",
+  "scripts": {
+    "build": "rm -rf ./build && babel src --out-dir=build --source-maps --copy-files --quiet",
+    "prepare": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/billinghamj/simple-aes-node.git"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-typecheck": "^3.9.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-flow": "^6.23.0"
+  },
+  "babel": {
+    "presets": [
+      "env",
+      "flow"
+    ],
+    "plugins": [
+      "typecheck"
+    ]
+  },
+  "keywords": [
+    "aes",
+    "simple",
+    "encryption",
+    "encrypt",
+    "decryption",
+    "decrypt",
+    "cbc",
+    "128",
+    "192",
+    "256",
+    "crypto",
+    "secure",
+    "cipher",
+    "block",
+    "chaining"
+  ]
+}
