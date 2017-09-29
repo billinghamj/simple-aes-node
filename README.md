@@ -1,11 +1,11 @@
 # simple-aes
 
 ```js
-import SimpleAes from 'simple-aes';
+import SimpleAES from 'simple-aes';
 
 // the key length can be 128, 192 or 256 bits
 // the key can be a Buffer or a hex string, but MUST match the key length
-const aes = new SimpleAes(192, '6dd860658d0b72475c5408830671b9d9750e7251b9cd68bd');
+const aes = new SimpleAES(192, '6dd860658d0b72475c5408830671b9d9750e7251b9cd68bd');
 
 // plaintext input must be a string
 const enc = aes.encrypt('foobar');
