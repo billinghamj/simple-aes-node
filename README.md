@@ -1,5 +1,8 @@
 # simple-aes
 
+[![NPM Version](https://img.shields.io/npm/v/simple-aes.svg?style=flat)](//www.npmjs.org/package/simple-aes)
+[![Build Status](https://img.shields.io/travis/billinghamj/simple-aes-node.svg?style=flat)](//travis-ci.org/billinghamj/simple-aes-node)
+
 ```js
 import SimpleAES from 'simple-aes';
 
