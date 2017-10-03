@@ -5,6 +5,9 @@ const BITS_IN_BYTE = 8;
 const BLOCK_SIZE = 16; // 128 bits
 
 export default class SimpleAES {
+	cipher: string;
+	[KEY_SYM]: Buffer;
+
 	constructor(keyLength: 128|192|256, key: string|Buffer) {
 		this.cipher = `aes${keyLength}`;
 		this[KEY_SYM] = parseKey(key, keyLength / BITS_IN_BYTE);
