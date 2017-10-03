@@ -125,18 +125,20 @@ test('encrypt exact outputs', t => {
 		return iv;
 	};
 
-	const output1 = aes1.encrypt(input);
-	const output2 = aes2.encrypt(input);
-	const output3 = aes3.encrypt(input);
+	try {
+		const output1 = aes1.encrypt(input);
+		const output2 = aes2.encrypt(input);
+		const output3 = aes3.encrypt(input);
 
-	t.equal(output1.iv, '0UtPjHPT7ogE7xzFl1Z3yQ==');
-	t.equal(output1.ciphertext, 'oWLuc+/MsSpq9vRZllqI5hWwTo9Pr8cK4MxVjjc43VM=');
-	t.equal(output2.iv, '0UtPjHPT7ogE7xzFl1Z3yQ==');
-	t.equal(output2.ciphertext, '32XFJ/v4S9qOLrG1FP6T8o+3qcswE+wkD0HBjXc9HkM=');
-	t.equal(output3.iv, '0UtPjHPT7ogE7xzFl1Z3yQ==');
-	t.equal(output3.ciphertext, 'j1XPzgh1CWls4tCrFMefDJ904AtDnYjJ1E8XziD2/WA=');
-
-	crypto.randomBytes = orig;
+		t.equal(output1.iv, '0UtPjHPT7ogE7xzFl1Z3yQ==');
+		t.equal(output1.ciphertext, 'oWLuc+/MsSpq9vRZllqI5hWwTo9Pr8cK4MxVjjc43VM=');
+		t.equal(output2.iv, '0UtPjHPT7ogE7xzFl1Z3yQ==');
+		t.equal(output2.ciphertext, '32XFJ/v4S9qOLrG1FP6T8o+3qcswE+wkD0HBjXc9HkM=');
+		t.equal(output3.iv, '0UtPjHPT7ogE7xzFl1Z3yQ==');
+		t.equal(output3.ciphertext, 'j1XPzgh1CWls4tCrFMefDJ904AtDnYjJ1E8XziD2/WA=');
+	} finally {
+		crypto.randomBytes = orig;
+	}
 
 	t.end();
 });
