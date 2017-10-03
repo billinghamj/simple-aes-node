@@ -1,6 +1,6 @@
 {
   "name": "simple-aes",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple abstraction of AES to ensure no silly mistakes",
   "homepage": "https://github.com/billinghamj/simple-aes",
   "bugs": "https://github.com/billinghamj/simple-aes/issues",
