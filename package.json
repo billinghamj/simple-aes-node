@@ -21,7 +21,7 @@
     "babel-plugin-typecheck": "^3.9.0",
     "babel-preset-env": "^1.6.0",
     "babel-preset-flow": "^6.23.0",
-    "tape": "^4.8.0"
+    "tape": "^5.0.1"
   },
   "babel": {
     "presets": [
